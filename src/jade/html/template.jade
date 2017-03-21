@@ -1,0 +1,22 @@
+doctype html
+html(lang=ja)
+  head
+    include ../include/common/head
+    include ../include/common/head-css
+
+  body
+    include ../include/common/header
+
+    - var current = 'nav03';
+    include ../include/common/nav
+
+    h1 #{config.site_title}
+    p
+      span(class='icon--a')
+      トップリード文トップリード文トップリード文トップリード文トップリード文トップリード文トップリード文トップリード文トップリード文トップリード文トップリード文トップリード文トップリード文トップリード文トップリード文
+
+    include ../include/module/sample
+
+    include ../include/common/footer
+
+    include ../include/common/footer-js

@@ -1,0 +1,9 @@
+nav
+  ul
+    each category in nav.category
+      if current == category.nav
+        li(class='cur')
+          a(href=category.link) #{category.label}
+      else
+        li
+          a(href=category.link) #{category.label}

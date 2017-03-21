@@ -1,0 +1,9 @@
+section
+  ul
+    each list in sample.list
+      li
+        a(href=list.link)
+          img(src=list.img, alt='')
+          span
+            span #{list.label}
+            span #{list.text}
