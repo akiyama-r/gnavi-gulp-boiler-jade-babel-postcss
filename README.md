@@ -72,7 +72,7 @@
 
     gulp sprite
 
-### start development with clean & watch
+### start development with watch
 
     gulp start
 
