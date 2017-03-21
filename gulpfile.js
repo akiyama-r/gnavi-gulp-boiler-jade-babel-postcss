@@ -8,7 +8,7 @@
  * $ gulp iamgemin
  *
  *
- * ** 開発開始 with clean & watchコマンド
+ * ** 開発開始 with watchコマンド
  *
  * $ gulp start
  *
