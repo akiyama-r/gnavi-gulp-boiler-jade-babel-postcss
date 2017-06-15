@@ -1,0 +1,8 @@
+{
+  "extends": ["eslint-config-gnavi"],
+  "globals": {
+    "_": true,
+    "$": true,
+    "jQuery": true
+  }
+}
