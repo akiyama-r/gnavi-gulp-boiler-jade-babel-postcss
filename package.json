@@ -1,10 +1,15 @@
 {
-  "name": "",
-  "description": "",
+  "name": "gnavi-gulp-boiler-jade-babel-postcss",
+  "description": "gulp boilerplate for gnavi front-end development",
   "version": "1.0.0",
   "homepage": "",
   "main": "index",
-  "scripts": {},
+  "scripts": {
+    "start": "gulp start",
+    "build": "gulp build",
+    "imageMin": "gulp imageMin",
+    "test": "gulp test"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -17,7 +22,7 @@
     "browser-sync": "^2.18.6",
     "cssnano": "^3.5.2",
     "del": "^2.2.2",
-    "eslint-config-gnavi": "0.0.9",
+    "eslint-config-gnavi": "^1.0.0-beta1",
     "gulp-babel": "^6.1.2",
     "gulp-babel-minify": "^0.1.12",
     "gulp-concat-util": "^0.5.5",
@@ -41,7 +46,10 @@
     "precss": "^1.4.0",
     "run-sequence": "^1.2.2"
   },
-  "repository": {},
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://github.com/gurunavi-creators/gnavi-gulp-boiler-jade-babel-postcss.git"
+  },
   "keywords": [],
   "bugs": {}
 }

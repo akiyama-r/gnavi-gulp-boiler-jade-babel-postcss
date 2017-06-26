@@ -2,16 +2,17 @@
  * common.js - utility.js
  * Author: sekiya
  * ---------------------------------------------------------------------- */
-const Utility = class {
-  static console (value) {
-    value = value || null;
-    console.log(value);
+
+class Utility {
+  static console(value) {
+    const str = value || null
+    console.log(str)
   }
 
-  static sampleUtility1 () {
-    var hoge = 1;
-    var huga = 2;
+  static sampleUtility1() {
+    const hoge = 1
+    const huga = 2
+    return hoge + huga
   }
-
-};
+}
 

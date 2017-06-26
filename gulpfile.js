@@ -154,13 +154,12 @@ const pathStat = {
  */
 const js_part = {
   lib: [
-    path.js_src + 'lib/jquery-3.2.0.min.js',
+    path.js_src + 'lib/jquery-3.0.0.min.js',
     path.js_src + 'lib/lodash.min.js'
   ],
   common: [
     path.js_src + 'common/utility.js',
-    path.js_src + 'common/ajax.js',
-    path.js_src + 'common/ui.js'
+    path.js_src + 'common/sample_a.js'
   ]
 };
 
@@ -330,6 +329,7 @@ gulp.task('babel', function () {
       errorHandler: notify.onError('Error: <%= error.message %>')
     }))
     .pipe(concat('common-' + version.js.common + '.js'))
+    .pipe(gulp.dest(path.tmp + 'js/'))
     .pipe(concat.header([
       '(function(window, $){',
       "  'use strict';",
@@ -339,7 +339,6 @@ gulp.task('babel', function () {
       '',
       '})(window, window.jQuery);'
     ].join('\n')))
-    .pipe(gulp.dest(path.tmp + 'js/'))
     .pipe(babel({
       filename: 'common-' + version.js.common + '.js',
       presets: [["es2015", {"loose": true}]],
@@ -371,8 +370,13 @@ gulp.task('concat:lib', function () {
 // eslint
 let eslint = require('gulp-eslint');
 gulp.task('eslint', function () {
-  return gulp.src(path.tmp + 'js/common.js')
-    .pipe(eslint('eslint-config-gnavi'));
+  return gulp.src(path.tmp + 'js/common-' + version.js.common + '.js')
+    .pipe(plumber({
+      errorHandler: notify.onError('Error: <%= error.message %>'),
+    }))
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failOnError())
 });
 
 
