@@ -17,12 +17,12 @@
   },
   "devDependencies": {
     "autoprefixer": "^6.3.4",
-    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-es2015": "^6.24.1",
     "babel-preset-es2015-loose": "^8.0.0",
     "browser-sync": "^2.18.6",
     "cssnano": "^3.5.2",
     "del": "^2.2.2",
-    "eslint-config-gnavi": "^1.0.0-beta1",
+    "eslint-config-gnavi": "^1.0.0",
     "gulp-babel": "^6.1.2",
     "gulp-babel-minify": "^0.1.12",
     "gulp-concat-util": "^0.5.5",
@@ -51,5 +51,10 @@
     "url": "git+ssh://github.com/gurunavi-creators/gnavi-gulp-boiler-jade-babel-postcss.git"
   },
   "keywords": [],
-  "bugs": {}
+  "bugs": {},
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  }
 }
