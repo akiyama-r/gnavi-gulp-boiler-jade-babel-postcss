@@ -1,5 +1,5 @@
 {
-  "extends": ["eslint-config-gnavi"],
+  "extends": ["gnavi"],
   "globals": {
     "_": true,
     "$": true,

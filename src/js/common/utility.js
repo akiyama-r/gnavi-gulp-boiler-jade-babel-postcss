@@ -2,6 +2,7 @@
  * common.js - utility.js
  * Author: sekiya
  * ---------------------------------------------------------------------- */
+/* eslint no-unused-vars: ["error", { "varsIgnorePattern": "Utility", "vars": "local" }] */
 
 class Utility {
   static console(value) {
